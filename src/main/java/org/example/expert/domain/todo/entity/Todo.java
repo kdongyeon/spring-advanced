@@ -23,7 +23,7 @@ public class Todo extends Timestamped {
     private String contents;
     private String weather;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)  //지연로딩 N+1 유발
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
